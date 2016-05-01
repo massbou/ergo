@@ -1,0 +1,206 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background: #ecf0f1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  height: 70px;
+  width: 100%;
+  background: #1d2933;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  -webkit-transition: background 300ms ease;
+  -moz-transition: background 300ms ease;
+  -ms-transition: background 300ms ease;
+  transition: background 300ms ease;
+}
+
+.navigation, .drop-navigation {
+  border: none;
+  height: 100%;
+  box-sizing: border-box;
+}
+.navigation a, .drop-navigation a {
+  color: #ecf0f1;
+  font-size: 22px;
+  font-family: "Open Sans";
+  padding: 22px 21px;
+  text-decoration: none;
+  height: 100%;
+  width: auto;
+  display: inline-block;
+  font-weight: 600;
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -ms-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+.navigation a:hover, .navigation a:active, .drop-navigation a:hover, .drop-navigation a:active {
+  background-color: #ecf0f1;
+  color: #1d2933;
+}
+
+.drop-navigation {
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  background: #1d2933;
+}
+.drop-navigation a {
+  width: 100%;
+  height: auto;
+}
+
+.dropdown-btn {
+  display: none;
+  padding-top: 3px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.dropup-btn {
+  float: right;
+  margin: 15px 15px 0 0;
+  height: 40px;
+  cursor: pointer;
+}
+
+#bar-1 {
+  transform: rotate(-45deg);
+}
+
+#bar-2 {
+  transform: translateY(-12px) rotate(45deg);
+}
+
+.dropdown-btn-bar, .dropup-btn-bar {
+  height: 5px;
+  width: 40px;
+  margin: 7px auto 0;
+  background: #ecf0f1;
+}
+
+.drop-nav {
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -ms-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+  top: -450px;
+  position: absolute;
+  width: 100vw;
+  background: #1d2933;
+}
+
+.actualite_mini_container {
+  margin: 90px auto;
+  max-width: 950px;
+  height: auto;
+  background: white;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.actualite_mini_container .actualite_mini_header {
+  padding: 35px;
+}
+.actualite_mini_container .actualite_mini_header .actualite_nom-prenom {
+  width: auto;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.actualite_mini_container .actualite_mini_header .actualite_date {
+  width: 150px;
+  float: right;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.actualite_mini_container .actualite_description {
+  width: auto;
+  text-align: left;
+  padding: 10px 20px;
+  padding-right: 30px;
+}
+.actualite_mini_container .actualite_image img {
+  margin: 0px auto;
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+}
+
+.actualite_titre {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 950;
+  margin: 0 auto;
+  text-align: center;
+}
+.actualite_titre h1 {
+  padding: 0 auto;
+}
+
+#monter {
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  visibility: hidden;
+  -moz-transitioy-property: none !important;
+  -webkit-transition-property: none !important;
+  -o-transition-property: none !important;
+  transition-property: none !important;
+}
+#monter a i {
+  color: #1d2933;
+  font-size: 50px;
+}
+#monter a i:hover {
+  color: #3a539b;
+}
+
+.btn-formulaire {
+  display: inline-block;
+  margin-top: 95px;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 1em 2em;
+  letter-spacing: 0.1em;
+  border-radius: 3px;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  text-transform: capitalize;
+  background: white;
+  color: #3a539b;
+  position: relative;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.btn-formulaire:hover {
+  box-shadow: 2px 2px 0px #3a539b, 4px 4px 0px white;
+  top: -4px;
+  left: calc(50% - 4px);
+}
+.btn-formulaire:active {
+  top: 4px;
+  left: calc(50% + 4px);
+  box-shadow: 0px 0px 0px white;
+}

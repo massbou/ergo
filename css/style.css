@@ -1,0 +1,318 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  height: 70px;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background: transparent;
+  -webkit-transition: background 300ms ease;
+  -moz-transition: background 300ms ease;
+  -ms-transition: background 300ms ease;
+  transition: background 300ms ease;
+}
+
+.head-scroll {
+  background: #1d2933;
+}
+.head-scroll .navigation a {
+  font-size: 20px;
+}
+
+.navigation, .drop-navigation {
+  border: none;
+  height: 100%;
+  box-sizing: border-box;
+}
+.navigation a, .drop-navigation a {
+  color: #ecf0f1;
+  font-size: 22px;
+  font-family: "Open Sans";
+  padding: 22px 21px;
+  text-decoration: none;
+  height: 100%;
+  width: auto;
+  display: inline-block;
+  font-weight: 600;
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -ms-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+.navigation a:hover, .navigation a:active, .drop-navigation a:hover, .drop-navigation a:active {
+  background-color: #ecf0f1;
+  color: #1d2933;
+}
+
+.drop-navigation {
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  background: #1d2933;
+}
+.drop-navigation a {
+  width: 100%;
+  height: auto;
+}
+
+.dropdown-btn {
+  display: none;
+  padding-top: 3px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.dropup-btn {
+  float: right;
+  margin: 15px 15px 0 0;
+  height: 40px;
+  cursor: pointer;
+}
+.dropup-btn #bar-1 {
+  transform: rotate(-45deg);
+}
+.dropup-btn #bar-2 {
+  transform: translateY(-12px) rotate(45deg);
+}
+
+.dropdown-btn-bar, .dropup-btn-bar {
+  height: 5px;
+  width: 40px;
+  margin: 7px auto 0;
+  background: #ecf0f1;
+}
+
+.drop-nav {
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  top: -450px;
+  position: absolute;
+  width: 100vw;
+  background: #1d2933;
+}
+
+.descend, .monte {
+  border: 0;
+  width: auto;
+  z-index: 1;
+}
+.descend::before, .monte::before {
+  background-image: url("../pics/arrow.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 1.5em;
+  width: 2em;
+  z-index: 1;
+}
+
+.monte::before {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.links {
+  width: auto;
+  height: auto;
+  display: flex;
+  bottom: 0;
+  position: absolute;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.links a {
+  padding: 15px;
+}
+
+.bienvenu {
+  min-height: 100vh;
+  background: url(../pics/background-acceuil4.png) no-repeat fixed center center;
+  background-size: cover;
+  text-align: center;
+  overflow: none;
+  height: auto;
+  position: relative;
+}
+
+.wrap-bienvenu {
+  box-sizing: border-box;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  padding: 10% 10%;
+}
+
+.contenu {
+  order: 2;
+  width: 60%;
+  position: relative;
+  text-align: center;
+}
+.contenu h1 {
+  color: #ecf0f1;
+  font-size: 30pt;
+  font: "Open Sans";
+  font-weight: 800;
+}
+.contenu p {
+  font-family: "Open Sans";
+  color: #ecf0f1;
+  max-width: 90%;
+  height: auto;
+  font-size: 13pt;
+  text-align: left;
+  padding-left: 59px;
+  position: relative;
+}
+
+.logo {
+  order: 1;
+  position: relative;
+  width: 30%;
+  height: auto;
+}
+
+[class^="sec-"] {
+  display: inline-block;
+  min-height: calc(100vh - 70px) !important;
+  text-align: center;
+  font-family: "Open Sans";
+  height: auto;
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+  color: #ecf0f1;
+  position: relative;
+  box-sizing: border-box;
+}
+[class^="sec-"] h1 {
+  padding: 10px;
+}
+[class^="sec-"] p {
+  text-align: center;
+  line-height: 50px;
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto;
+  font-size: 20px;
+  position: relative;
+  padding-bottom: 150px;
+}
+
+.sec-edt {
+  background: #3a539b;
+  text-align: center;
+  overflow: none;
+  height: auto;
+}
+
+.sec-notes {
+  background: url(../pics/background-notes2.png) no-repeat fixed center center;
+  background-size: cover;
+  text-align: center;
+  overflow: none;
+  height: auto;
+}
+
+.sec-plan {
+  background: #c72c2a;
+}
+
+[class^="btn-"] {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  padding: 1em 2em;
+  letter-spacing: 0.1em;
+  border-radius: 3px;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  text-transform: capitalize;
+  position: absolute !important;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.btn-edt {
+  background: #ecf0f1;
+  color: #3a539b;
+  position: relative;
+}
+.btn-edt:hover {
+  box-shadow: 2px 2px 0px #3a539b, 4px 4px 0px #ecf0f1;
+  bottom: 64px;
+  left: calc(50% -4px);
+}
+.btn-edt:active {
+  bottom: 60px;
+  left: calc(50% + 4px);
+  box-shadow: 0px 0px 0px white;
+}
+
+.btn-notes {
+  background: #39cccc;
+  color: #ecf0f1;
+  position: relative;
+}
+.btn-notes:hover {
+  box-shadow: 2px 2px 0px #ecf0f1, 4px 4px 0px #39cccc;
+  bottom: 64px;
+  left: calc(50% -4px);
+}
+.btn-notes:active {
+  bottom: 60px;
+  left: calc(50% + 4px);
+  box-shadow: 0px 0px 0px #b3ebeb;
+}
+
+.btn-plan {
+  background: #ecf0f1;
+  color: #d94d4b;
+  position: relative;
+}
+.btn-plan:hover {
+  box-shadow: 2px 2px 0px #d94d4b, 4px 4px 0px #ecf0f1;
+  bottom: 64px;
+  left: calc(50% -4px);
+}
+.btn-plan:active {
+  bottom: 60px;
+  left: calc(50% + 4px);
+  box-shadow: 0px 0px 0px white;
+}

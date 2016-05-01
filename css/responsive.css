@@ -1,0 +1,37 @@
+@media all and (max-width: 821px) {
+  header {
+    background: #1d2933;
+    height: 50px;
+  }
+  header .navigation {
+    display: none;
+  }
+
+  .dropdown-btn {
+    display: block;
+  }
+
+  [class^="sec-"] {
+    min-height: calc(100vh - 50px) !important;
+  }
+  [class^="sec-"] p {
+    max-width: 80%;
+    text-align: left;
+  }
+
+  .contenu {
+    width: 100%;
+  }
+  .contenu p {
+    width: 100%;
+  }
+
+  .wrap-bienvenu {
+    margin-top: 49px;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .wrap-bienvenu .logo {
+    width: 60%;
+  }
+}

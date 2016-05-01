@@ -1,0 +1,323 @@
+$yellow : #EBC130
+$blue : #1B75BB
+$blue_gray : #1D2933
+$dark_blue: #3A539B
+$white : #ECF0F1
+$brown : #1E1C19
+$green : #0db14b
+$black : #1e1d1a
+$red : #d94d4b
+
+
+$aqua:  #7FDBFF
+$blue2:  #0074D9
+$navy:  #001F3F
+$teal:  #39CCCC
+$green2: #2ECC40
+$olive: #3D9970
+$lime:  #01FF70
+
+$yellow2:  #FFDC00
+$orange:  #FF851B
+$red2:     #FF4136
+$fuchsia: #F012BE
+$purple:  #B10DC9
+$maroon:  #85144B
+
+body, html
+    padding: 0
+    margin: 0
+    font-family: "Open Sans", sans-serif
+
+*
+    box-sizing: border-box
+
+header
+    height: 70px
+    width: 100%
+    background: transparent
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: fixed
+    top: 0
+    z-index: 2
+    background: transparent
+    -webkit-transition: background 300ms ease
+    -moz-transition: background 300ms ease
+    -ms-transition: background 300ms ease
+    transition: background 300ms ease
+
+.head-scroll
+    background: $blue_gray
+    .navigation
+        a
+            font-size: 20px
+
+.navigation, .drop-navigation
+    border: none
+    height: 100%
+    box-sizing: border-box
+
+    a
+        color: $white
+        font-size: 22px
+        font-family: "Open Sans"
+        padding: 22px 21px
+        text-decoration: none
+        height: 100%
+        width: auto
+        display: inline-block
+        font-weight: 600
+        -webkit-transition: all 400ms ease-in-out
+        -moz-transition: all 400ms ease-in-out
+        -ms-transition: all 400ms ease-in-out
+        transition: all 400ms ease-in-out
+
+
+        &:hover, &:active
+            background-color: $white
+            color: $blue_gray
+
+.drop-navigation
+    width: 300px
+    text-align: center
+    margin: 0 auto
+    background: $blue_gray
+    a
+        width: 100%
+        height: auto
+
+.dropdown-btn
+    display: none
+    padding-top: 3px
+    box-sizing: border-box
+    position: absolute
+    top: 0px
+    right: 5px
+    height: 50px
+    width: 50px
+    cursor: pointer
+
+.dropup-btn
+    float: right
+    margin: 15px 15px 0 0
+    height: 40px
+    cursor: pointer
+
+    #bar-1
+        transform: rotate(-45deg)
+
+    #bar-2
+        transform: translateY(-12px) rotate(45deg)
+
+
+.dropdown-btn-bar, .dropup-btn-bar
+    height: 5px
+    width: 40px
+    margin: 7px auto 0
+    background: $white
+
+.drop-nav
+    -webkit-transition: all 300ms ease-in-out
+    -moz-transition: all 300ms ease-in-out
+    -ms-transition: all 300ms ease-in-out
+    transition: all 300ms ease-in-out
+    top: -450px
+    position: absolute
+    width: 100vw
+    background: $blue_gray
+
+.descend, .monte
+    border: 0
+    width: auto
+    z-index: 1
+
+    &::before
+        background-image: url("../pics/arrow.svg")
+        background-position: center center
+        background-repeat: no-repeat
+        background-size: contain
+        content: ''
+        display: block
+        height: 1.5em
+        width: 2em
+        z-index: 1
+
+.monte
+    &::before
+        -webkit-transform: rotate(180deg)
+        -moz-transform: rotate(180deg)
+        -ms-transform: rotate(180deg)
+        -o-transform: rotate(180deg)
+        transform: rotate(180deg)
+
+
+.links
+    width: auto
+    height: auto
+    display: flex
+    bottom: 0
+    position: absolute
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    left: 50%
+    transform: translate(-50%, 0)
+
+    a
+        padding: 15px
+
+.bienvenu
+    min-height: 100vh
+    background: url(../pics/background-acceuil4.png) no-repeat fixed center center
+    background-size: cover
+    text-align: center
+    overflow: none
+    height: auto
+    position: relative
+
+
+.wrap-bienvenu
+    box-sizing: border-box
+    height: auto
+    overflow: hidden
+    display: flex
+    flex-direction: row
+    align-content: center
+    align-items: center
+    padding: 10% 10%
+
+.contenu
+    order: 2
+    width: 60%
+    position: relative
+    text-align: center
+
+    h1
+        color: $white
+        font-size: 30pt
+        font: "Open Sans"
+        font-weight: 800
+
+    p
+        font-family: "Open Sans"
+        color: $white
+        max-width: 90%
+        height: auto
+        font-size: 13pt
+        text-align: left
+        padding-left: 59px
+        position: relative
+
+.logo
+    order: 1
+    position: relative
+    width: 30%
+    height: auto
+
+[class^="sec-"]
+    display: inline-block
+    min-height: calc(100vh - 70px) !important
+    text-align: center
+    font-family: "Open Sans"
+    height: auto
+    width: 100%
+    padding: 0 !important
+    margin: 0 !important
+    color: $white
+    position: relative
+    box-sizing: border-box
+
+    h1
+        padding: 10px
+    p
+        text-align: center
+        line-height: 50px
+        max-width: 50%
+        height: auto
+        margin: 0 auto
+        font-size: 20px
+        position: relative
+        padding-bottom: 150px
+
+.sec-edt
+    background: $dark_blue
+    text-align: center
+    overflow: none
+    height: auto
+
+.sec-notes
+    background: url(../pics/background-notes2.png) no-repeat fixed center center
+    background-size: cover
+    text-align: center
+    overflow: none
+    height: auto
+
+.sec-plan
+    background: darken($red, 10%)
+
+
+[class^="btn-"]
+
+    display: inline-block
+    text-decoration: none
+    font-size: 18px
+    color: white
+    padding: 1em 2em
+    letter-spacing: .1em
+    border-radius: 3px
+    -webkit-transition: all 300ms ease-in-out
+    -moz-transition: all 300ms ease-in-out
+    -ms-transition: all 300ms ease-in-out
+    transition: all 300ms ease-in-out
+    text-transform: capitalize
+    position: absolute !important
+    bottom: 60px
+    left: 50%
+    transform: translate(-50%, 0)
+
+.btn-edt
+    background: $white
+    color: $dark_blue
+    position: relative
+    &:hover
+        box-shadow: 2px 2px 0px $dark_blue, 4px 4px 0px $white
+        bottom: 64px
+        left: calc(50% -4px)
+
+    &:active
+        bottom: 60px
+        left: calc(50% + 4px)
+        box-shadow: 0px 0px 0px lighten($white, 30%)
+
+.btn-notes
+    background: $teal
+    color: $white
+    position: relative
+
+    &:hover
+        box-shadow: 2px 2px 0px $white, 4px 4px 0px $teal
+        bottom: 64px
+        left: calc(50% -4px)
+
+    &:active
+        bottom: 60px
+        left: calc(50% + 4px)
+        box-shadow: 0px 0px 0px lighten($teal, 30%)
+
+.btn-plan
+    background: $white
+    color: $red
+    position: relative
+
+    &:hover
+        box-shadow: 2px 2px 0px $red, 4px 4px 0px $white
+        bottom: 64px
+        left: calc(50% -4px)
+
+    &:active
+        bottom: 60px
+        left: calc(50% + 4px)
+        box-shadow: 0px 0px 0px lighten($white, 30%)

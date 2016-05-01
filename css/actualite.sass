@@ -1,0 +1,228 @@
+$yellow : #EBC130
+$blue : #1B75BB
+$blue_gray : #1D2933
+$dark_blue: #3A539B
+$white : #ECF0F1
+$brown : #1E1C19
+$green : #0db14b
+$black : #1e1d1a
+$red : #d94d4b
+
+
+$aqua:  #7FDBFF
+$blue2:  #0074D9
+$navy:  #001F3F
+$teal:  #39CCCC
+$green2: #2ECC40
+$olive: #3D9970
+$lime:  #01FF70
+
+$yellow2:  #FFDC00
+$orange:  #FF851B
+$red2:     #FF4136
+$fuchsia: #F012BE
+$purple:  #B10DC9
+$maroon:  #85144B
+
+body, html
+	padding: 0
+	margin: 0
+	font-family: "Open Sans", sans-serif
+	background: $white
+
+*
+	box-sizing: border-box
+
+
+header
+	height: 70px
+	width: 100%
+	background: $blue_gray
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	position: fixed
+	top: 0
+	z-index: 2
+	-webkit-transition: background 300ms ease
+	-moz-transition: background 300ms ease
+	-ms-transition: background 300ms ease
+	transition: background 300ms ease
+
+
+.navigation, .drop-navigation
+	border: none
+	height: 100%
+	box-sizing: border-box
+
+	a
+		color: $white
+		font-size: 22px
+		font-family: "Open Sans"
+		padding: 22px 21px
+		text-decoration: none
+		height: 100%
+		width: auto
+		display: inline-block
+		font-weight: 600
+		-webkit-transition: all 400ms ease-in-out
+		-moz-transition: all 400ms ease-in-out
+		-ms-transition: all 400ms ease-in-out
+		transition: all 400ms ease-in-out
+
+
+		&:hover, &:active
+			background-color: $white
+			color: $blue_gray
+
+
+.drop-navigation
+	width: 300px
+	text-align: center
+	margin: 0 auto
+	background: $blue_gray
+	a
+		width: 100%
+		height: auto
+
+.dropdown-btn
+	display: none
+	padding-top: 3px
+	box-sizing: border-box
+	position: absolute
+	top: 0px
+	right: 5px
+	height: 50px
+	width: 50px
+	cursor: pointer
+.dropup-btn
+	float: right
+	margin: 15px 15px 0 0
+	height: 40px
+	cursor: pointer
+
+#bar-1
+	transform: rotate(-45deg)
+
+#bar-2
+	transform: translateY(-12px) rotate(45deg)
+
+
+.dropdown-btn-bar, .dropup-btn-bar
+	height: 5px
+	width: 40px
+	margin: 7px auto 0
+	background: $white
+
+.drop-nav
+	-webkit-transition: all 400ms ease-in-out
+	-moz-transition: all 400ms ease-in-out
+	-ms-transition: all 400ms ease-in-out
+	transition: all 400ms ease-in-out
+	top: -450px
+	position: absolute
+	width: 100vw
+	background: $blue_gray
+
+
+.actualite_mini_container
+	margin: 90px auto
+	max-width:	950px
+	height: auto
+	background: white
+	border-bottom-right-radius: 30px
+	border-bottom-left-radius: 30px
+
+	.actualite_mini_header
+		padding: 35px
+
+		.actualite_nom-prenom
+			width: auto
+			position: relative
+			display: inline-block
+			text-transform: uppercase
+
+		.actualite_date
+			width: 150px
+			float: right
+			position: relative
+			display: inline-block
+			text-transform: uppercase
+
+	.actualite_description
+		width: auto
+		text-align: left
+		padding: 10px 20px
+		padding-right: 30px
+
+	.actualite_image
+		img
+			margin: 0px auto
+			width: 100%
+			height: auto
+			max-height: 450px
+
+
+.actualite_titre
+	width: 100%
+	text-transform: uppercase
+	font-size: 20px
+	font-weight: 950
+	margin: 0 auto
+	text-align: center
+
+	h1
+		padding: 0 auto
+
+#monter
+	position: fixed
+	bottom: 10%
+	right: 5%
+	visibility: hidden
+	-moz-transitioy-property: none !important
+	-webkit-transition-property: none !important
+	-o-transition-property: none !important
+	transition-property: none !important
+
+	a
+		i
+			color: $blue_gray
+			font-size: 50px
+
+			&:hover
+				color: $dark_blue
+
+
+
+
+.btn-formulaire
+	display: inline-block
+	margin-top: 95px
+	text-decoration: none
+	font-size: 22px
+	padding: 1em 2em
+	letter-spacing: .1em
+	border-radius: 3px
+	-webkit-transition: all 300ms ease-in-out
+	-moz-transition: all 300ms ease-in-out
+	-ms-transition: all 300ms ease-in-out
+	transition: all 300ms ease-in-out
+	text-transform: capitalize
+	background: white
+	color: $dark_blue
+	position: relative
+	top: 0px
+	left: 50%
+	transform: translate(-50%, 0)
+
+
+	&:hover
+		box-shadow: 2px 2px 0px $dark_blue, 4px 4px 0px white
+		top: -4px
+		left: calc(50% - 4px)
+
+	&:active
+		top: 4px
+		left: calc(50% + 4px)
+		box-shadow: 0px 0px 0px lighten($white, 30%)
